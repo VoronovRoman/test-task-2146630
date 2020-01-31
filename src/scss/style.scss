@@ -1,0 +1,258 @@
+//$font-stack: -apple-system, BlinkMacSystemFont, Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+
+@import "./reset";
+
+$bg: #E5E5E5;
+$textColor: #333333;
+// @font-face {
+//   font-family: "Roboto";
+//   font-style: normal;
+//   font-weight: 400;
+//   src: url(../fonts/Roboto-Regular.ttf);
+// }
+
+%line {
+	content: "";
+	height: 1px;
+	background-color: #DADADA;
+	display: block;
+	margin: 10px 0px;
+}
+
+body {
+	color: $textColor;
+	background-color: $bg;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+.wrapper {
+	max-width: 720px;
+	background-color: #fff;
+	margin: 0 auto;
+
+	.container {
+		padding:  20px 20px 0px 20px;
+	}
+}
+
+header {
+	margin-bottom: 20px;
+
+	.personal {
+		display: flex;
+		position: relative;
+		margin-bottom: 10px;
+
+		.photo {
+			border-radius: 50%;
+			z-index: 1;
+		}
+
+		.name {
+			font-size: 16px;
+			font-weight: bold;
+			margin: 10px 10px;
+		}
+
+		.position {
+			font-size: 12px;
+			color: #808080;
+			font-weight: normal;
+			margin-left: 10px;
+		}
+
+		.status {
+			padding: 8px 10px 8px 75px;
+			background: #FFFBC8;
+			border: 1px solid #DADADA;
+			border-radius: 5px;
+			position: absolute;
+			left: 58px;
+			top: 50px;
+		}
+	}
+
+	.services {
+		display: flex;
+		flex-flow: column;
+		margin-left: 135px;
+
+		.serv {
+			text-align: end;
+			padding-right: 30px;
+			font-size: 13px;
+		}
+
+		.types {
+
+			&::before,
+			&::after {
+				@extend %line;
+			}
+
+			.type {
+				width: 100%;
+			}
+
+			.reserv .type {
+				background: linear-gradient(90deg, #B1E19B 75%, #fff 25%);
+
+			}
+
+			.tours .type {
+				background: linear-gradient(90deg, #ACE2F8 35%, #fff 5%);
+			}
+
+			.hostels .type {
+				background: linear-gradient(90deg, #ACE2F8 10%, #fff 0%);
+			}
+		}
+
+		.progress {
+			display: flex;
+			justify-content: space-between;
+			padding-right: 30px;
+
+			p {
+				font-size: 13px;
+				padding: 4px 4px;
+				margin: 1px 0px;
+
+				&.count {
+					font-weight: bold;
+				}
+			}
+		}
+
+		.common {
+			font-weight: bold;
+			font-size: 16px;
+		}
+	}
+}
+
+section.comments {
+	.general {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 20px;
+		a {
+			color: #005DA1;
+		}
+
+		.all {
+			display: flex;
+			flex-flow: row wrap;
+			a {margin-right: 5px;}
+		}
+
+		.icons {
+			display: flex;
+			flex-flow: row wrap;
+
+			a {
+				text-decoration: none;
+				color: inherit;
+				position: relative;
+				font-size: 12px;
+				margin-left: 35px;
+
+				&.likes::before,
+				&.disscus::before {
+					position: absolute;
+					content: '';
+					left: -20px;
+					width: 16px;
+					height: 16px;
+				}
+
+				&.likes::before {
+					background: url("../img/like.png") no-repeat center;
+					top: -0.5px;
+				}
+
+				&.disscus::before {
+					background: url("../img/comment.png") no-repeat center;
+					top: 1px;
+				}
+			}
+		}
+		.active {
+			text-decoration: none;
+			color: inherit;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		
+	}
+
+
+	.list {
+
+		.title{
+			display: flex;
+			line-height: 14px;
+		}
+		.name{font-weight: bold;
+			margin-right: 10px;
+		}
+		.date{
+			color: #808080;
+			font-size: 12px;
+		}
+
+		.text {
+			background: #F2FBFF;
+			padding: 20px 15px 15px 20px;
+			position: relative;
+			margin: 10px 0px;
+			border: 1px solid #C4CBCF;
+
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				left: 20px;
+				top: -10px;
+				border: 5px solid transparent;
+				border-bottom: 5px solid #C4CBCF;
+				border-left: 5px solid #C4CBCF;
+			}
+
+			&::after {
+				border-bottom: 5px solid #F2FBFF;
+				border-left: 5px solid #F2FBFF;
+				top: -8px;
+				left: 21px;
+			}
+		}
+	}
+}
+
+section.add-comment{
+	background-color: #F2F2F2;
+	form{
+		display: flex;
+	flex-flow: column;
+	padding: 30px 20px;
+		input{
+			background: #FFFFFF;
+			border: 1px solid #000000;
+			border-radius: 1px;
+			width: 100%;
+			height: 63px;
+			margin: 0 auto;
+			margin-bottom: 20px;
+		}
+		button{
+			background: #FDD639;
+			border-radius: 23px;
+			width: 281px;
+			height: 43px;
+			margin: 0 auto;
+			font-weight: bold;
+		}
+	}
+}
