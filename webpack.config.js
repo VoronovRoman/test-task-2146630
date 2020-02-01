@@ -1,5 +1,6 @@
 const path = require("path");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
   mode: "development",
@@ -36,6 +37,17 @@ module.exports = {
             },
           },
           'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+                plugins: [
+                    autoprefixer({
+                        //browsers:['ie >= 8', 'last 4 version']
+                    })
+                ],
+            }
+        },
            'sass-loader'
         ],
       },
@@ -44,7 +56,6 @@ module.exports = {
         use: [{
           loader: 'file-loader',
           options: {
-
             //publicPath: "./src/img/",
             name: 'img/[name].[ext]'
           }

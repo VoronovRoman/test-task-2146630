@@ -6,7 +6,6 @@ let input = document.querySelector("input"),
 
 function makeDate() {
 	let d = new Date()
-
 	let monthes = 'января,февраля,марта,апреля,мая,июня,июля,августа,сентября,октября,ноября,декабяр'.split(',');
 	let m = monthes[d.getMonth()]
 	let str = `${d.getDate()} ${m} ${d.getFullYear()}`
@@ -21,14 +20,14 @@ function makeComent() {
 	document.querySelector(".list").appendChild(clone)
 }
 
-form.addEventListener(("submit" || ctrlEnter()), (e)=>{
-	e.preventDefault();
-	makeComent()
-	input.value = ""
-})
-
 function ctrlEnter(event, formElem){
 	if((event.ctrlKey) && ((event.keyCode == 0xA)||(event.keyCode == 0xD))){
         formElem.submit.click();
     }
 }
+
+form.addEventListener(("submit" || ctrlEnter()), (e)=>{
+	e.preventDefault();
+	makeComent()
+	input.value = ""
+})

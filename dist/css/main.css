@@ -67,6 +67,8 @@ body {
 header {
   margin-bottom: 20px; }
   header .personal {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
     margin-bottom: 10px; }
@@ -91,8 +93,13 @@ header {
       left: 58px;
       top: 50px; }
   header .services {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
     margin-left: 135px; }
     header .services .serv {
       text-align: end;
@@ -101,14 +108,21 @@ header {
     header .services .types .type {
       width: 100%; }
     header .services .types .reserv .type {
+      background: -webkit-gradient(linear, left top, right top, color-stop(75%, #B1E19B), color-stop(25%, #fff));
       background: linear-gradient(90deg, #B1E19B 75%, #fff 25%); }
     header .services .types .tours .type {
+      background: -webkit-gradient(linear, left top, right top, color-stop(35%, #ACE2F8), color-stop(5%, #fff));
       background: linear-gradient(90deg, #ACE2F8 35%, #fff 5%); }
     header .services .types .hostels .type {
+      background: -webkit-gradient(linear, left top, right top, color-stop(10%, #ACE2F8), color-stop(0%, #fff));
       background: linear-gradient(90deg, #ACE2F8 10%, #fff 0%); }
     header .services .progress {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      justify-content: space-between;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
       padding-right: 30px; }
       header .services .progress p {
         font-size: 13px;
@@ -121,19 +135,33 @@ header {
       font-size: 16px; }
 
 section.comments .general {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 20px; }
   section.comments .general a {
     color: #005DA1; }
   section.comments .general .all {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap; }
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap; }
     section.comments .general .all a {
       margin-right: 5px; }
   section.comments .general .icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap; }
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap; }
     section.comments .general .icons a {
       text-decoration: none;
       color: inherit;
@@ -159,6 +187,8 @@ section.comments .general {
     font-weight: bold; }
 
 section.comments .list .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   line-height: 14px; }
 
@@ -193,8 +223,13 @@ section.comments .list .text {
 section.add-comment {
   background-color: #F2F2F2; }
   section.add-comment form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
     padding: 30px 20px; }
     section.add-comment form input {
       background: #FFFFFF;
