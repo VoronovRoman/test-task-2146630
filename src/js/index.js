@@ -2,8 +2,7 @@ import "../scss/style.scss"
 
 
 let input = document.querySelector("input"),
-	form = document.querySelector("form"),
-	clone = document.querySelector(".comment").cloneNode(true);
+	form = document.querySelector("form");
 
 function makeDate() {
 	let d = new Date()
@@ -15,6 +14,7 @@ function makeDate() {
 }
 
 function makeComent() {
+	let clone = document.querySelector(".comment").cloneNode(true);
 	clone.querySelector(".name").textContent = "Voronov Roman"
 	clone.querySelector(".date").textContent = makeDate()
 	clone.querySelector(".text").textContent = input.value
@@ -25,4 +25,5 @@ form.addEventListener("submit", (e)=>{
 	e.preventDefault();
 	let com = makeComent()
 	document.querySelector(".list").appendChild(com)
+	input.value = ""
 })
