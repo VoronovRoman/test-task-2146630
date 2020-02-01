@@ -18,12 +18,17 @@ function makeComent() {
 	clone.querySelector(".name").textContent = "Voronov Roman"
 	clone.querySelector(".date").textContent = makeDate()
 	clone.querySelector(".text").textContent = input.value
-	return clone
+	document.querySelector(".list").appendChild(clone)
 }
 
-form.addEventListener("submit", (e)=>{
+form.addEventListener(("submit" || ctrlEnter()), (e)=>{
 	e.preventDefault();
-	let com = makeComent()
-	document.querySelector(".list").appendChild(com)
+	makeComent()
 	input.value = ""
 })
+
+function ctrlEnter(event, formElem){
+	if((event.ctrlKey) && ((event.keyCode == 0xA)||(event.keyCode == 0xD))){
+        formElem.submit.click();
+    }
+}

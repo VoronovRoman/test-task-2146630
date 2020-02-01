@@ -25,6 +25,8 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1; }
+  body * {
+    outline: none; }
 
 ol, ul {
   list-style: none; }
@@ -198,10 +200,10 @@ section.add-comment {
       background: #FFFFFF;
       border: 1px solid #000000;
       border-radius: 1px;
-      width: 100%;
       height: 63px;
-      margin: 0 auto;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      font-size: 14px;
+      padding: 20px; }
     section.add-comment form button {
       background: #FDD639;
       border-radius: 23px;
